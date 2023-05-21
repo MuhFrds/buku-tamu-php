@@ -1,172 +1,153 @@
-<!DOCTYPE html>
-<html lang="en">
+ <!-- panggil file header -->
+ <?php include "header.php"; ?>
 
-<head>
+ <!-- Head -->
+ <div class="head text-center">
+     <img src="assets/img/youtube.png" alt="" width="100">
+     <h2 class="text-white">Sistem informasi buku tamu <br> Smk mutuharjo</h2>
+ </div>
+ <!-- end head -->
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+ <!-- row -->
+ <div class="row mt-2">
+     <!-- col-lg-7 -->
+     <div class="col-lg-7 mb-3">
+         <div class="card shadow bg-gradient-light">
+             <!-- card body -->
+             <div class="card-body">
 
-    <title>Buku Tamu</title>
+                 <div class="text-center">
+                     <h1 class="h4 text-gray-900 mb-4"> Identitas Pengunjung</h1>
+                 </div>
+                 <form class="user" method="POST" action="">
+                     <div class="form-grow">
+                         <input type="text" class="form-control 
+                                    form-control-user" name="nama" placeholder="Nama Pengunjung" required>
+                     </div>
+                     <br>
+                     <div class="form-grow ">
+                         <input type="text" class="form-control 
+                                    form-control-user" name="alamat" placeholder="Alamat Pengunjung" required>
+                     </div>
+                     <br>
+                     <div class="form-grow ">
+                         <input type="text" class="form-control 
+                                    form-control-user" name="tujuan" placeholder="Tujuan Pengunjung" required>
+                     </div>
+                     <br>
+                     <div class="form-grow ">
+                         <input type="text" class="form-control 
+                                    form-control-user" name="nope" placeholder="No.Hp Pengunjung" required>
+                     </div>
+                     <br>
 
-    <!-- Custom fonts for this template-->
-    <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+                     <!-- Button -->
+                     <button type="submit" name="bsimpan" class="btn btn-primary btn-user btn-block">Simpan Data</button>
 
-    <!-- Custom styles for this template-->
-    <link href="assets/css/sb-admin-2.min.css" rel="stylesheet">
+                 </form>
+                 <hr>
+                 <div class="text-center">
+                     <a class="small" href="">By Muhammad Firdaus | 2023 - <?= date('Y') ?></a>
+                 </div>
+             </div>
+             <!-- end card body -->
+         </div>
+     </div>
+     <!-- end col-lg-7 -->
 
-</head>
+     <!-- col-lg-5 -->
+     <div class="col-lg-5 mb-3">
+         <!-- card -->
+         <div class="card shadow">
+             <!-- card body -->
+             <div class="card-body">
+                 <div class="text-center">
+                     <h1 class="h4 text-gray-900 mb-4"> Statistik Pengunjung</h1>
+                 </div>
+                 <table class="table table-bordered">
+                     <tr>
+                         <td> Hari ini</td>
+                         <td> : 10</td>
 
-<body class="bg-gradient-primary">
+                     </tr>
+                     <tr>
+                         <td> Kemarin</td>
+                         <td> : 15</td>
 
-    <div class="container">
+                     </tr>
+                     <tr>
+                         <td> Bulan Ini</td>
+                         <td> : 30</td>
 
-        <!-- Head -->
-        <div class="head text-center">
-            <img src="assets/img/youtube.png" alt="" width="100">
-            <h2 class="text-white">Sistem informasi buku tamu</h2>
-        </div>
-        <!-- end head -->
+                     </tr>
+                     <tr>
+                         <td> Total</td>
+                         <td> : 50</td>
 
-        <!-- row -->
-        <div class="row mt-2">
-            <!-- col-lg-7 -->
-            <div class="col-lg-7 mb-3">
-                <div class="card shadow bg-gradient-light">
-                    <!-- card body -->
-                    <div class="card-body">
-                        <div class="p-5">
-                            <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
-                            </div>
-                            <form class="user">
-                                <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user" id="exampleFirstName" placeholder="First Name">
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <input type="text" class="form-control form-control-user" id="exampleLastName" placeholder="Last Name">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Email Address">
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <input type="password" class="form-control form-control-user" id="exampleRepeatPassword" placeholder="Repeat Password">
-                                    </div>
-                                </div>
-                                <a href="login.html" class="btn btn-primary btn-user btn-block">
-                                    Register Account
-                                </a>
-                                <hr>
-                                <a href="index.html" class="btn btn-google btn-user btn-block">
-                                    <i class="fab fa-google fa-fw"></i> Register with Google
-                                </a>
-                                <a href="index.html" class="btn btn-facebook btn-user btn-block">
-                                    <i class="fab fa-facebook-f fa-fw"></i> Register with Facebook
-                                </a>
-                            </form>
-                            <hr>
-                            <div class="text-center">
-                                <a class="small" href="forgot-password.html">Forgot Password?</a>
-                            </div>
-                            <div class="text-center">
-                                <a class="small" href="login.html">Already have an account? Login!</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end card body -->
-                </div>
-            </div>
-            <!-- end col-lg-7 -->
-
-            <!-- col-lg-7 -->
-            <div class="col-lg-5 mb-3">
-                <div class="card shadow bg-gradient-light">
-                    <!-- card body -->
-                    <div class="card-body">
-                    </div>
-                </div>
-            </div>
+                     </tr>
+                 </table>
+             </div>
+             <!-- card body -->
+         </div>
+         <!-- end card -->
+     </div>
+     <!-- end col-lg-5 -->
 
 
 
-        </div>
-        <!-- end row -->
+ </div>
+ <!-- end row -->
 
-        <div class="card o-hidden border-0 shadow-lg my-5">
-            <div class="card-body p-0">
-                <!-- Nested Row within Card Body -->
-                <div class="row">
-                    <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
-                    <div class="col-lg-7">
-                        <div class="p-5">
-                            <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
-                            </div>
-                            <form class="user">
-                                <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user" id="exampleFirstName" placeholder="First Name">
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <input type="text" class="form-control form-control-user" id="exampleLastName" placeholder="Last Name">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Email Address">
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <input type="password" class="form-control form-control-user" id="exampleRepeatPassword" placeholder="Repeat Password">
-                                    </div>
-                                </div>
-                                <a href="login.html" class="btn btn-primary btn-user btn-block">
-                                    Register Account
-                                </a>
-                                <hr>
-                                <a href="index.html" class="btn btn-google btn-user btn-block">
-                                    <i class="fab fa-google fa-fw"></i> Register with Google
-                                </a>
-                                <a href="index.html" class="btn btn-facebook btn-user btn-block">
-                                    <i class="fab fa-facebook-f fa-fw"></i> Register with Facebook
-                                </a>
-                            </form>
-                            <hr>
-                            <div class="text-center">
-                                <a class="small" href="forgot-password.html">Forgot Password?</a>
-                            </div>
-                            <div class="text-center">
-                                <a class="small" href="login.html">Already have an account? Login!</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+ <!-- DataTales Example -->
+ <div class="card shadow mb-4">
+     <div class="card-header py-3">
+         <h6 class="m-0 font-weight-bold text-primary">Data Pengunjung Hari ini [<?= date('d-m-Y') ?>]</h6>
+     </div>
+     <div class="card-body">
+         <div class="table-responsive">
+             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                 <thead>
+                     <tr>
+                         <th>No. </th>
+                         <th>Tanggal</th>
+                         <th>Nama Pengunjung</th>
+                         <th>Alamat</th>
+                         <th>Tujuan</th>
+                         <th>No. Hp</th>
+                     </tr>
+                 </thead>
+                 <tfoot>
+                     <tr>
+                         <th>No. </th>
+                         <th>Tanggal</th>
+                         <th>Nama Pengunjung</th>
+                         <th>Alamat</th>
+                         <th>Tujuan</th>
+                         <th>No. Hp</th>
+                     </tr>
+                 </tfoot>
+                 <tbody>
+                     <?php
+                        $tgl = date('Y-m-d'); // 20223-05-21
+                        $tampil = mysqli_query($koneksi, "SELECT * FROM ttamu where tanggal like '%$tgl%' order by id desc");
+                        $no = 1;
+                        while ($data = mysqli_fetch_array($tampil)) {
+                        ?>
+                         <tr>
+                             <td><?= $no++ ?></td>
+                             <td><?= $data['tanggal'] ?></td>
+                             <td><?= $data['nama'] ?></td>
+                             <td><?= $data['alamat'] ?></td>
+                             <td><?= $data['tujuan'] ?></td>
+                             <td><?= $data['nope'] ?></td>
 
-    </div>
+                         </tr>
+                     <?php } ?>
+                 </tbody>
+             </table>
+         </div>
+     </div>
+ </div>
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="assets/vendor/jquery/jquery.min.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Core plugin JavaScript-->
-    <script src="assets/vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for all pages-->
-    <script src="assets/js/sb-admin-2.min.js"></script>
-
-</body>
-
-</html>
+ <!-- panggil file footer -->
+ <?php include "footer.php"; ?>
