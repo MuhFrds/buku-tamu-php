@@ -93,20 +93,65 @@ if (isset($_POST['bsimpan'])) {
                 <div class="text-center">
                     <h1 class="h4 text-gray-900 mb-4"> Statistik Pengunjung</h1>
                 </div>
+                <?php
+                // deklarasi tanggal
+
+
+                // menampilkan tanggal now
+                $tgl_sekarang = date('Y-m-d');
+
+                // menampilkan tanggal kemarin
+                $kemarin = date('Y-m-d', strtotime('-1 day', strtotime(date('Y-m-d'))));
+
+                // mendapatkan 6 hari sebekum tanggal sekarang
+                $seminggu = date('Y-m-d h:i:s', strtotime('-1 week +1 day', strtotime($tgl_sekarang)));
+
+
+                $sekarang = date('Y-d-m h:i:s');
+
+                // persiapan query tampilkan jumlah data pengunjung
+
+                $tgl_sekarang = mysqli_fetch_array(mysqli_query(
+                    $koneksi,
+                    "SELECT count(*) FROM ttamu where tanggal like '%$tgl_sekarang%'"
+                ));
+
+
+                $kemarin = mysqli_fetch_array(mysqli_query(
+                    $koneksi,
+                    "SELECT count(*) FROM ttamu where tanggal like '%$kemarin%'"
+                ));
+
+
+                // $seminggu = mysqli_fetch_array(mysqli_query(
+                //     $koneksi,
+                //     "SELECT count(*) FROM ttamu where tanggal BETWEEN '$seminggu' and '$sekarang'"
+                // ));
+                $seminggu = mysqli_fetch_array(mysqli_query(
+                    $koneksi,
+                    "SELECT count(*) FROM ttamu where tanggal BETWEEN '$seminggu' and '$sekarang'"
+                ));
+                // masih error karena isinya 0
+
+                ?>
                 <table class="table table-bordered">
                     <tr>
                         <td> Hari ini</td>
-                        <td> : 10</td>
+                        <td>: <?= $tgl_sekarang[0] ?></td>
 
                     </tr>
                     <tr>
                         <td> Kemarin</td>
-                        <td> : 15</td>
+                        <td> : <?= $kemarin[0] ?></td>
 
                     </tr>
                     <tr>
-                        <td> Bulan Ini</td>
-                        <td> : 30</td>
+                        <td> Minggu Ini</td>
+                        <td> : <?= $seminggu[0] ?></td>
+
+                    </tr>
+                    <td> Bulan Ini</td>
+                    <td> : 30</td>
 
                     </tr>
                     <tr>
