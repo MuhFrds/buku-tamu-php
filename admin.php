@@ -107,7 +107,7 @@ if (isset($_POST['bsimpan'])) {
                 $seminggu = date('Y-m-d h:i:s', strtotime('-1 week +1 day', strtotime($tgl_sekarang)));
 
 
-                $sekarang = date('Y-d-m h:i:s');
+                $sekarang = date('Y-m-d h:i:s');
 
                 // persiapan query tampilkan jumlah data pengunjung
 
@@ -131,7 +131,12 @@ if (isset($_POST['bsimpan'])) {
                     $koneksi,
                     "SELECT count(*) FROM ttamu where tanggal BETWEEN '$seminggu' and '$sekarang'"
                 ));
-                // masih error karena isinya 0
+                // ---------
+                // $query = mysqli_query(
+                //     $koneksi,
+                //     "SELECT count(*) FROM ttamu WHERE tanggal BETWEEN '$seminggu' AND '$sekarang'"
+                // );
+
 
                 ?>
                 <table class="table table-bordered">
