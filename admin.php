@@ -123,19 +123,24 @@ if (isset($_POST['bsimpan'])) {
                 ));
 
 
-                // $seminggu = mysqli_fetch_array(mysqli_query(
-                //     $koneksi,
-                //     "SELECT count(*) FROM ttamu where tanggal BETWEEN '$seminggu' and '$sekarang'"
-                // ));
                 $seminggu = mysqli_fetch_array(mysqli_query(
                     $koneksi,
-                    "SELECT count(*) FROM ttamu where tanggal BETWEEN '$seminggu' and '$sekarang'"
+                    "SELECT count(*) FROM ttamu where tanggal BETWEEN '$seminggu' and 
+                    '$sekarang'"
                 ));
-                // ---------
-                // $query = mysqli_query(
-                //     $koneksi,
-                //     "SELECT count(*) FROM ttamu WHERE tanggal BETWEEN '$seminggu' AND '$sekarang'"
-                // );
+
+                $bulan_ini = date('m');
+
+                $sebulan = mysqli_fetch_array(mysqli_query(
+                    $koneksi,
+                    "SELECT count(*) FROM ttamu where month(tanggal) = '$bulan_ini'"
+                ));
+
+                $keseluruhan = mysqli_fetch_array(mysqli_query(
+                    $koneksi,
+                    "SELECT count(*) FROM ttamu"
+                ));
+
 
 
                 ?>
@@ -156,12 +161,12 @@ if (isset($_POST['bsimpan'])) {
 
                     </tr>
                     <td> Bulan Ini</td>
-                    <td> : 30</td>
+                    <td> : <?= $sebulan[0] ?></td>
 
                     </tr>
                     <tr>
                         <td> Total</td>
-                        <td> : 50</td>
+                        <td> : <?= $keseluruhan[0] ?></td>
 
                     </tr>
                 </table>
