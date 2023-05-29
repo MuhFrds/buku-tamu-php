@@ -188,6 +188,13 @@ if (isset($_POST['bsimpan'])) {
         <h6 class="m-0 font-weight-bold text-primary">Data Pengunjung Hari ini [<?= date('d-m-Y') ?>]</h6>
     </div>
     <div class="card-body">
+        <a href="rekapitulasi.php" class="btn btn-success mb-3"><i class="fa
+         fa-table">Rekapitulasi Pengunjung</i></a>
+        <a href="logout.php" class="btn btn-danger mb-3"><i class="fa
+         fa-sign-out-alt"> Logout</i></a>
+
+
+
         <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
