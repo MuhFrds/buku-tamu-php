@@ -92,6 +92,20 @@ include "header.php";
                                 <?php } ?>
                             </tbody>
                         </table>
+
+
+                        <center>
+                            <form method="POST" action="exportexcel.php">
+                                <div class="col-md-4">
+                                    <input type="hidden" name="tanggala" value=" <?= @$_POST['tanggal1'] ?>">
+                                    <input type="hidden" name="tanggalb" value=" <?= @$_POST['tanggal2'] ?>">
+
+                                    <button class="btn btn-success form-control" name="bexport"><i class="fa fa-download"></i> Export Data Excel</button>
+                                </div>
+                            </form>
+                        </center>
+
+
                     </div>
 
                 <?php endif; ?>
