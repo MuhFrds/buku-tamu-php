@@ -1,3 +1,27 @@
+<?php
+
+// buat session start
+session_start();
+
+
+// uji jika session telah di set atau tidak
+if (
+    empty($_SESSION['username'])
+    or empty($_SESSION['password'])
+    or empty($_SESSION['nama_pengguna'])
+) {
+    echo "<script>
+    alert('Maaf, untuk mengakses halaman ini harap login dahulu ');
+    document.location='index.php';
+    </script>";
+}
+
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
