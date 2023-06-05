@@ -20,7 +20,7 @@ if (isset($_POST['bsimpan'])) {
 
     // uji jika simpan data sukses
     if ($simpan) {
-        echo "<script>alert('Simpan data sukses, Terima kasih...!');
+        echo "<script>alert('Simpan data sukses, Terima kasih!');
                  document.location='?'</script>";
     } else {
         echo "<script>alert('Simpan data Gagal!!!');
