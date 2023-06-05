@@ -39,7 +39,7 @@
                         <!-- Nested Row within Card Body -->
                         <div class="row">
                             <div class="col-lg-6 d-lg-block bg-success shadow-lg p-5 text-center">
-                                <img src="assets/img/youtube.png" alt="" width="200">
+                                <img src="assets/img/logo-sekolah.png" alt="" width="200">
                                 <h3 class="text-white"> Sistem Informasi Buku Tamu <br>
                                     <b>Smk mutuharjo</b> <br> <small> uas dpk pplg </small>
                                 </h3>
