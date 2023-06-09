@@ -220,6 +220,7 @@ if (isset($_POST['bsimpan'])) {
                         <th>Alamat</th>
                         <th>Tujuan</th>
                         <th>No. Hp</th>
+                        <th>Opsi</th>
                     </tr>
                 </thead>
                 <tfoot>
@@ -230,6 +231,7 @@ if (isset($_POST['bsimpan'])) {
                         <th>Alamat</th>
                         <th>Tujuan</th>
                         <th>No. Hp</th>
+                        <th>Opsi</th>
                     </tr>
                 </tfoot>
                 <tbody>
@@ -246,6 +248,20 @@ if (isset($_POST['bsimpan'])) {
                             <td><?= $data['alamat'] ?></td>
                             <td><?= $data['tujuan'] ?></td>
                             <td><?= $data['nope'] ?></td>
+                            <td>
+                                <div class="form-group">
+                                    <form action="edit.php" method="GET" style="display: inline;">
+                                        <input type="hidden" name="id" value="<?= $data['id'] ?>">
+                                        <button type="submit" class="btn btn-warning btn-sm"><i class=""></i> Edit</button>
+                                    </form>
+                                    <form action="hapus.php" method="GET" style="display: inline;">
+                                        <input type="hidden" name="id" value="<?= $data['id'] ?>">
+                                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">
+                                            <i class=""></i> Delate
+                                        </button>
+                                    </form>
+                                </div>
+                            </td>
 
                         </tr>
                     <?php } ?>
