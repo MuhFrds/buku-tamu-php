@@ -36,7 +36,7 @@ if (isset($_POST['bsimpan'])) {
 
 <!-- Head -->
 <div class="head text-center">
-    <img src="assets/img/youtube.png" alt="" width="100">
+    <img src="assets/img/logo-sekolah.png" alt="" width="100">
     <h2 class="text-white">Sistem informasi buku tamu <br> Smk mutuharjo</h2>
 </div>
 <!-- end head -->
@@ -152,28 +152,34 @@ if (isset($_POST['bsimpan'])) {
                     ?>
                     <table class="table table-bordered">
                         <tr>
-                            <td> Hari ini</td>
-                            <td>: <?= $tgl_sekarang[0] ?></td>
-
+                            <td><i class="fas fa-user text-primary"></i> Hari ini</td>
+                            <td>:
+                                <?= $tgl_sekarang[0] ?>
+                            </td>
                         </tr>
                         <tr>
-                            <td> Kemarin</td>
-                            <td> : <?= $kemarin[0] ?></td>
-
+                            <td><i class="fas fa-user-friends text-success"></i> Kemarin</td>
+                            <td>:
+                                <?= $kemarin[0] ?>
+                            </td>
                         </tr>
                         <tr>
-                            <td> Minggu Ini</td>
-                            <td> : <?= $seminggu[0] ?></td>
-
-                        </tr>
-                        <td> Bulan Ini</td>
-                        <td> : <?= $sebulan[0] ?></td>
-
+                            <td><i class="fas fa-users text-info"></i> Minggu ini</td>
+                            <td>:
+                                <?= $seminggu[0] ?>
+                            </td>
                         </tr>
                         <tr>
-                            <td> Total</td>
-                            <td> : <?= $keseluruhan[0] ?></td>
-
+                            <td><i class="fas fa-chart-pie text-warning"></i> Bulan ini</td>
+                            <td>:
+                                <?= $sebulan[0] ?>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-chart-line text-danger"></i> Keseluruhan</td>
+                            <td>:
+                                <?= $keseluruhan[0] ?>
+                            </td>
                         </tr>
                     </table>
                 </div>
