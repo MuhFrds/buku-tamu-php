@@ -87,6 +87,20 @@ include "header.php";
                                         <td><?= $data['alamat'] ?></td>
                                         <td><?= $data['tujuan'] ?></td>
                                         <td><?= $data['nope'] ?></td>
+                                        <td>
+                                            <div class="form-group">
+                                                <form action="edit.php" method="GET" style="display: inline;">
+                                                    <input type="hidden" name="id" value="<?= $data['id'] ?>">
+                                                    <button type="submit" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i> Edit</button>
+                                                </form>
+                                                <form action="hapus.php" method="GET" style="display: inline;">
+                                                    <input type="hidden" name="id" value="<?= $data['id'] ?>">
+                                                    <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">
+                                                        <i class="fa fa-trash"></i> Hapus
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </td>
 
                                     </tr>
                                 <?php } ?>
