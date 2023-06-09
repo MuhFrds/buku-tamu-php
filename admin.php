@@ -37,7 +37,9 @@ if (isset($_POST['bsimpan'])) {
 <!-- Head -->
 <div class="head text-center">
     <img src="assets/img/logo-sekolah.png" alt="" width="100">
-    <h2 class="text-white">Sistem informasi buku tamu <br> Smk mutuharjo</h2>
+    <h2 class="text-white">Sistem Infomasi Buku Tamu <br>
+        <b>SMK MUTUHARJO</b>
+    </h2>
 </div>
 <!-- end head -->
 
@@ -50,7 +52,7 @@ if (isset($_POST['bsimpan'])) {
             <div class="card-body">
 
                 <div class="text-center">
-                    <h1 class="h4 text-gray-900 mb-4"> Identitas Pengunjung</h1>
+                    <h1 class="h4 text-gray-900 mb-4"> <b>IDENTITAS PENGUNJUNG</b></h1>
                 </div>
                 <form class="user" method="POST" action="">
                     <div class="form-grow">
@@ -183,74 +185,75 @@ if (isset($_POST['bsimpan'])) {
                         </tr>
                     </table>
                 </div>
-                <!-- card body -->
             </div>
-            <!-- end card -->
+            <!-- card body -->
         </div>
-        <!-- end col-lg-5 -->
-
-
-
+        <!-- end card -->
     </div>
-    <!-- end row -->
+    <!-- end col-lg-5 -->
 
-    <!-- DataTales Example -->
-    <div class="card shadow mb-4">
-        <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Data Pengunjung Hari ini [<?= date('d-m-Y') ?>]</h6>
-        </div>
-        <div class="card-body">
-            <a href="rekapitulasi.php" class="btn btn-success mb-3"><i class="fa
+
+
+</div>
+<!-- end row -->
+
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Data Pengunjung Hari ini [<?= date('d-m-Y') ?>]</h6>
+    </div>
+    <div class="card-body">
+        <a href="rekapitulasi.php" class="btn btn-success mb-3"><i class="fa
          fa-table">Rekapitulasi Pengunjung</i></a>
-            <a href="logout.php" class="btn btn-danger mb-3"><i class="fa
+        <a href="logout.php" class="btn btn-danger mb-3"><i class="fa
          fa-sign-out-alt"> Logout</i></a>
 
 
 
-            <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                    <thead>
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>No. </th>
+                        <th>Tanggal</th>
+                        <th>Nama Pengunjung</th>
+                        <th>Alamat</th>
+                        <th>Tujuan</th>
+                        <th>No. Hp</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>No. </th>
+                        <th>Tanggal</th>
+                        <th>Nama Pengunjung</th>
+                        <th>Alamat</th>
+                        <th>Tujuan</th>
+                        <th>No. Hp</th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <?php
+                    $tgl = date('Y-m-d'); // 20223-05-21
+                    $tampil = mysqli_query($koneksi, "SELECT * FROM ttamu where tanggal like '%$tgl%' order by id desc");
+                    $no = 1;
+                    while ($data = mysqli_fetch_array($tampil)) {
+                    ?>
                         <tr>
-                            <th>No. </th>
-                            <th>Tanggal</th>
-                            <th>Nama Pengunjung</th>
-                            <th>Alamat</th>
-                            <th>Tujuan</th>
-                            <th>No. Hp</th>
-                        </tr>
-                    </thead>
-                    <tfoot>
-                        <tr>
-                            <th>No. </th>
-                            <th>Tanggal</th>
-                            <th>Nama Pengunjung</th>
-                            <th>Alamat</th>
-                            <th>Tujuan</th>
-                            <th>No. Hp</th>
-                        </tr>
-                    </tfoot>
-                    <tbody>
-                        <?php
-                        $tgl = date('Y-m-d'); // 20223-05-21
-                        $tampil = mysqli_query($koneksi, "SELECT * FROM ttamu where tanggal like '%$tgl%' order by id desc");
-                        $no = 1;
-                        while ($data = mysqli_fetch_array($tampil)) {
-                        ?>
-                            <tr>
-                                <td><?= $no++ ?></td>
-                                <td><?= $data['tanggal'] ?></td>
-                                <td><?= $data['nama'] ?></td>
-                                <td><?= $data['alamat'] ?></td>
-                                <td><?= $data['tujuan'] ?></td>
-                                <td><?= $data['nope'] ?></td>
+                            <td><?= $no++ ?></td>
+                            <td><?= $data['tanggal'] ?></td>
+                            <td><?= $data['nama'] ?></td>
+                            <td><?= $data['alamat'] ?></td>
+                            <td><?= $data['tujuan'] ?></td>
+                            <td><?= $data['nope'] ?></td>
 
-                            </tr>
-                        <?php } ?>
-                    </tbody>
-                </table>
-            </div>
+                        </tr>
+                    <?php } ?>
+                </tbody>
+            </table>
         </div>
     </div>
+</div>
 
-    <!-- panggil file footer -->
-    <?php include "footer.php"; ?>
+<!-- panggil file footer -->
+<?php include "footer.php"; ?>
