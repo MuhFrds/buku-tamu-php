@@ -20,6 +20,8 @@
 
     <!-- Custom styles for this template-->
     <link href="assets/css/sb-admin-2.min.css" rel="stylesheet">
+    <!-- custom animated -->
+    <link href="assets/css/animated.css" rel="stylesheet" type="text/css">
 
 </head>
 
