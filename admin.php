@@ -90,159 +90,161 @@ if (isset($_POST['bsimpan'])) {
 
     <!-- col-lg-5 -->
     <div class="col-lg-5 mb-3">
-        <!-- card -->
-        <div class="card shadow">
-            <!-- card body -->
-            <div class="card-body">
-                <div class="text-center">
-                    <h1 class="h4 text-gray-900 mb-4"> Statistik Pengunjung</h1>
-                </div>
-                <?php
-                // deklarasi tanggal
+        <!-- Collapsable Card Example -->
+        <div class="card shadow mb-4">
+            <!-- Card Header - Accordion -->
+            <a href="#collapseCardExample" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+                <h6 class="m-0 font-weight-bold text-center">STATISTIK PENGUNJUNG</h6>
+            </a>
+            <!-- Card Content - Collapse -->
+            <div class="collapse show" id="collapseCardExample">
+                <div class="card-body">
+                    <?php
+                    // deklarasi tanggal
 
 
-                // menampilkan tanggal now
-                $tgl_sekarang = date('Y-m-d');
+                    // menampilkan tanggal now
+                    $tgl_sekarang = date('Y-m-d');
 
-                // menampilkan tanggal kemarin
-                $kemarin = date('Y-m-d', strtotime('-1 day', strtotime(date('Y-m-d'))));
+                    // menampilkan tanggal kemarin
+                    $kemarin = date('Y-m-d', strtotime('-1 day', strtotime(date('Y-m-d'))));
 
-                // mendapatkan 6 hari sebekum tanggal sekarang
-                $seminggu = date('Y-m-d h:i:s', strtotime('-1 week +1 day', strtotime($tgl_sekarang)));
-
-
-                $sekarang = date('Y-m-d h:i:s');
-
-                // persiapan query tampilkan jumlah data pengunjung
-
-                $tgl_sekarang = mysqli_fetch_array(mysqli_query(
-                    $koneksi,
-                    "SELECT count(*) FROM ttamu where tanggal like '%$tgl_sekarang%'"
-                ));
+                    // mendapatkan 6 hari sebekum tanggal sekarang
+                    $seminggu = date('Y-m-d h:i:s', strtotime('-1 week +1 day', strtotime($tgl_sekarang)));
 
 
-                $kemarin = mysqli_fetch_array(mysqli_query(
-                    $koneksi,
-                    "SELECT count(*) FROM ttamu where tanggal like '%$kemarin%'"
-                ));
+                    $sekarang = date('Y-m-d h:i:s');
+
+                    // persiapan query tampilkan jumlah data pengunjung
+
+                    $tgl_sekarang = mysqli_fetch_array(mysqli_query(
+                        $koneksi,
+                        "SELECT count(*) FROM ttamu where tanggal like '%$tgl_sekarang%'"
+                    ));
 
 
-                $seminggu = mysqli_fetch_array(mysqli_query(
-                    $koneksi,
-                    "SELECT count(*) FROM ttamu where tanggal BETWEEN '$seminggu' and 
+                    $kemarin = mysqli_fetch_array(mysqli_query(
+                        $koneksi,
+                        "SELECT count(*) FROM ttamu where tanggal like '%$kemarin%'"
+                    ));
+
+
+                    $seminggu = mysqli_fetch_array(mysqli_query(
+                        $koneksi,
+                        "SELECT count(*) FROM ttamu where tanggal BETWEEN '$seminggu' and 
                     '$sekarang'"
-                ));
+                    ));
 
-                $bulan_ini = date('m');
+                    $bulan_ini = date('m');
 
-                $sebulan = mysqli_fetch_array(mysqli_query(
-                    $koneksi,
-                    "SELECT count(*) FROM ttamu where month(tanggal) = '$bulan_ini'"
-                ));
+                    $sebulan = mysqli_fetch_array(mysqli_query(
+                        $koneksi,
+                        "SELECT count(*) FROM ttamu where month(tanggal) = '$bulan_ini'"
+                    ));
 
-                $keseluruhan = mysqli_fetch_array(mysqli_query(
-                    $koneksi,
-                    "SELECT count(*) FROM ttamu"
-                ));
+                    $keseluruhan = mysqli_fetch_array(mysqli_query(
+                        $koneksi,
+                        "SELECT count(*) FROM ttamu"
+                    ));
 
 
 
-                ?>
-                <table class="table table-bordered">
-                    <tr>
-                        <td> Hari ini</td>
-                        <td>: <?= $tgl_sekarang[0] ?></td>
+                    ?>
+                    <table class="table table-bordered">
+                        <tr>
+                            <td> Hari ini</td>
+                            <td>: <?= $tgl_sekarang[0] ?></td>
 
-                    </tr>
-                    <tr>
-                        <td> Kemarin</td>
-                        <td> : <?= $kemarin[0] ?></td>
+                        </tr>
+                        <tr>
+                            <td> Kemarin</td>
+                            <td> : <?= $kemarin[0] ?></td>
 
-                    </tr>
-                    <tr>
-                        <td> Minggu Ini</td>
-                        <td> : <?= $seminggu[0] ?></td>
+                        </tr>
+                        <tr>
+                            <td> Minggu Ini</td>
+                            <td> : <?= $seminggu[0] ?></td>
 
-                    </tr>
-                    <td> Bulan Ini</td>
-                    <td> : <?= $sebulan[0] ?></td>
+                        </tr>
+                        <td> Bulan Ini</td>
+                        <td> : <?= $sebulan[0] ?></td>
 
-                    </tr>
-                    <tr>
-                        <td> Total</td>
-                        <td> : <?= $keseluruhan[0] ?></td>
+                        </tr>
+                        <tr>
+                            <td> Total</td>
+                            <td> : <?= $keseluruhan[0] ?></td>
 
-                    </tr>
-                </table>
+                        </tr>
+                    </table>
+                </div>
+                <!-- card body -->
             </div>
-            <!-- card body -->
+            <!-- end card -->
         </div>
-        <!-- end card -->
+        <!-- end col-lg-5 -->
+
+
+
     </div>
-    <!-- end col-lg-5 -->
+    <!-- end row -->
 
-
-
-</div>
-<!-- end row -->
-
-<!-- DataTales Example -->
-<div class="card shadow mb-4">
-    <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Data Pengunjung Hari ini [<?= date('d-m-Y') ?>]</h6>
-    </div>
-    <div class="card-body">
-        <a href="rekapitulasi.php" class="btn btn-success mb-3"><i class="fa
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Data Pengunjung Hari ini [<?= date('d-m-Y') ?>]</h6>
+        </div>
+        <div class="card-body">
+            <a href="rekapitulasi.php" class="btn btn-success mb-3"><i class="fa
          fa-table">Rekapitulasi Pengunjung</i></a>
-        <a href="logout.php" class="btn btn-danger mb-3"><i class="fa
+            <a href="logout.php" class="btn btn-danger mb-3"><i class="fa
          fa-sign-out-alt"> Logout</i></a>
 
 
 
-        <div class="table-responsive">
-            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                <thead>
-                    <tr>
-                        <th>No. </th>
-                        <th>Tanggal</th>
-                        <th>Nama Pengunjung</th>
-                        <th>Alamat</th>
-                        <th>Tujuan</th>
-                        <th>No. Hp</th>
-                    </tr>
-                </thead>
-                <tfoot>
-                    <tr>
-                        <th>No. </th>
-                        <th>Tanggal</th>
-                        <th>Nama Pengunjung</th>
-                        <th>Alamat</th>
-                        <th>Tujuan</th>
-                        <th>No. Hp</th>
-                    </tr>
-                </tfoot>
-                <tbody>
-                    <?php
-                    $tgl = date('Y-m-d'); // 20223-05-21
-                    $tampil = mysqli_query($koneksi, "SELECT * FROM ttamu where tanggal like '%$tgl%' order by id desc");
-                    $no = 1;
-                    while ($data = mysqli_fetch_array($tampil)) {
-                    ?>
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
                         <tr>
-                            <td><?= $no++ ?></td>
-                            <td><?= $data['tanggal'] ?></td>
-                            <td><?= $data['nama'] ?></td>
-                            <td><?= $data['alamat'] ?></td>
-                            <td><?= $data['tujuan'] ?></td>
-                            <td><?= $data['nope'] ?></td>
-
+                            <th>No. </th>
+                            <th>Tanggal</th>
+                            <th>Nama Pengunjung</th>
+                            <th>Alamat</th>
+                            <th>Tujuan</th>
+                            <th>No. Hp</th>
                         </tr>
-                    <?php } ?>
-                </tbody>
-            </table>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>No. </th>
+                            <th>Tanggal</th>
+                            <th>Nama Pengunjung</th>
+                            <th>Alamat</th>
+                            <th>Tujuan</th>
+                            <th>No. Hp</th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        <?php
+                        $tgl = date('Y-m-d'); // 20223-05-21
+                        $tampil = mysqli_query($koneksi, "SELECT * FROM ttamu where tanggal like '%$tgl%' order by id desc");
+                        $no = 1;
+                        while ($data = mysqli_fetch_array($tampil)) {
+                        ?>
+                            <tr>
+                                <td><?= $no++ ?></td>
+                                <td><?= $data['tanggal'] ?></td>
+                                <td><?= $data['nama'] ?></td>
+                                <td><?= $data['alamat'] ?></td>
+                                <td><?= $data['tujuan'] ?></td>
+                                <td><?= $data['nope'] ?></td>
+
+                            </tr>
+                        <?php } ?>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
-</div>
 
-<!-- panggil file footer -->
-<?php include "footer.php"; ?>
+    <!-- panggil file footer -->
+    <?php include "footer.php"; ?>
