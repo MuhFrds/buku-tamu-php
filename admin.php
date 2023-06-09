@@ -204,7 +204,7 @@ if (isset($_POST['bsimpan'])) {
     </div>
     <div class="card-body">
         <a href="rekapitulasi.php" class="btn btn-success mb-3"><i class="fa
-         fa-table">Rekapitulasi Pengunjung</i></a>
+         fa-table"> Rekapitulasi Pengunjung</i></a>
         <a href="logout.php" class="btn btn-danger mb-3"><i class="fa
          fa-sign-out-alt"> Logout</i></a>
 
