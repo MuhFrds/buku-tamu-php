@@ -8,14 +8,10 @@
                 <!-- Nested Row within Card Body -->
                 <div class="row">
                     <div class="col-lg-6 d-lg-block bg-info shadow-lg p-5 text-center">
-                        <!-- panggil file image -->
-                        <?php include "image.php"; ?>
                         <br>
                         <br>
                         <br>
                         <h3 class="text-white">Sistem Informasi Buku Tamu</h3>
-                        <!-- panggil file text -->
-                        <?php include "text.php"; ?><br>
                         <h4><small class="text-white">Sukoharjo, Jawa Tengah</small></h4>
                     </div>
                     <?php
