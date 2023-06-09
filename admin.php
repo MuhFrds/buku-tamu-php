@@ -57,22 +57,22 @@ if (isset($_POST['bsimpan'])) {
                 <form class="user" method="POST" action="">
                     <div class="form-grow">
                         <input type="text" class="form-control 
-                                    form-control-user" name="nama" placeholder="Nama Pengunjung" required>
+                                    form-control-user" name="nama" placeholder="Nama Pengunjung" required maxlength="30">
                     </div>
                     <br>
                     <div class="form-grow ">
                         <input type="text" class="form-control 
-                                    form-control-user" name="alamat" placeholder="Alamat Pengunjung" required>
+                                    form-control-user" name="alamat" placeholder="Alamat Pengunjung" required maxlength="15">
                     </div>
                     <br>
                     <div class="form-grow ">
                         <input type="text" class="form-control 
-                                    form-control-user" name="tujuan" placeholder="Tujuan Pengunjung" required>
+                                    form-control-user" name="tujuan" placeholder="Tujuan Pengunjung" required maxlength="30">
                     </div>
                     <br>
                     <div class="form-grow ">
                         <input type="text" class="form-control 
-                                    form-control-user" name="nope" placeholder="No.Hp Pengunjung" required>
+                                    form-control-user" name="nope" placeholder="No.Hp Pengunjung" required maxlength="15">
                     </div>
                     <br>
 
