@@ -61,13 +61,13 @@
                                             <input type="text" name="nama" class="form-control form-control-user" placeholder="Nama" value="<?= $row['nama']; ?>" required>
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" name="alamat" class="form-control form-control-user" placeholder="Alamat" value="<?= $row['alamat']; ?>" minlength="3" required>
+                                            <input type="text" name="alamat" class="form-control form-control-user" placeholder="Alamat" value="<?= $row['alamat']; ?>" required>
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" name="tujuan" class="form-control form-control-user" placeholder="Tujuan" value="<?= $row['tujuan']; ?>" minlength="3" required>
+                                            <input type="text" name="tujuan" class="form-control form-control-user" placeholder="Tujuan" value="<?= $row['tujuan']; ?>" required>
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" name="nope" class="form-control form-control-user" placeholder="No. HP" value="<?= $row['nope']; ?>" required required pattern="\d{12}" title="and Please enter 12 digit number!">
+                                            <input type="text" name="nope" class="form-control form-control-user" placeholder="No. HP" value="<?= $row['nope']; ?>" required>
                                         </div>
                                         <button type="submit" name="submit" class="btn btn-primary btn-user btn-block">Simpan
                                             Data</button>

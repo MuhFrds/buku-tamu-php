@@ -58,6 +58,7 @@ include "header.php";
                                     <th>Alamat</th>
                                     <th>Tujuan</th>
                                     <th>No. Hp</th>
+                                    <th>Opsi</th>
                                 </tr>
                             </thead>
                             <tfoot>
@@ -68,6 +69,7 @@ include "header.php";
                                     <th>Alamat</th>
                                     <th>Tujuan</th>
                                     <th>No. Hp</th>
+                                    <th>Opsi</th>
                                 </tr>
                             </tfoot>
                             <tbody>
