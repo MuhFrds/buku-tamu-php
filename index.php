@@ -42,8 +42,9 @@
                         <div class="row">
                             <div class="col-lg-6 d-lg-block bg-success shadow-lg p-5 text-center">
                                 <img src="assets/img/logo-sekolah.png" alt="" width="200">
+                                <br><br>
                                 <h3 class="text-white"> Sistem Informasi Buku Tamu <br>
-                                    <b>Smk mutuharjo</b> <br> <small> uas dpk pplg </small>
+                                    <b>SMK MUTUHARJO</b> <br> <small> UAS DPK 10 PPLG</small>
                                 </h3>
                             </div>
                             <div class="col-lg-6">
