@@ -30,6 +30,10 @@ if (isset($_POST['bsimpan'])) {
 
 ?>
 
+
+<!-- custom animated -->
+<link href="assets/css/animated.css" rel="stylesheet" type="text/css">
+
 <!-- Head -->
 <div class="head text-center">
     <img src="assets/img/youtube.png" alt="" width="100">
