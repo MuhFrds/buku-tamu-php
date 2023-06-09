@@ -25,8 +25,9 @@ include "header.php";
 
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label for="">dari tanggal</label>
-                                <input type="date" class="form-control" name="tanggal2" value="<?= isset($_POST['tangggal2']) ? $_POST['tanggal2'] : date('Y-m-d') ?>" required>
+                                <label>Sampai Tanggal</label>
+                                <input class="form-control" type="date" name="tanggal2" value="<?= isset($_POST['tanggal2']) ?
+                                                                                                    $_POST['tanggal2'] : date('Y-m-d') ?>" required>
                             </div>
                         </div>
                     </div>
