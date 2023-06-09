@@ -33,7 +33,7 @@ if (
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Buku Tamu</title>
+    <title>Sistem Informasi Buku Tamu | SMK Mutuharjo</title>
 
     <!-- Custom fonts for this template-->
     <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
