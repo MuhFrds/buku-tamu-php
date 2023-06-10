@@ -18,7 +18,7 @@ include "header.php";
                         <div class="col-md-3"></div>
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label for="">Dari tanggal</label>
+                                <label for="">Dari Tanggal</label>
                                 <input type="date" class="form-control" name="tanggal1" value="<?= isset($_POST['tanggal1']) ?
                                                                                                     $_POST['tanggal1'] : date('Y-m-d') ?>" required>
                             </div>
