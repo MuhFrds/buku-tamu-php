@@ -30,6 +30,7 @@ if (isset($_POST['bsimpan'])) {
 
 ?>
 
+<br>
 
 <!-- custom animated -->
 <link href="assets/css/animated.css" rel="stylesheet" type="text/css">
