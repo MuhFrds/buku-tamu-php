@@ -73,7 +73,7 @@
                                         <button type="submit" name="submit" class="btn btn-primary btn-user btn-block">Simpan
                                             Data</button>
                                         <br>
-                                        <a style="text-decoration:none" href="rekapitulasi.php"><button type="button" name="" class="btn btn-danger btn-user btn-block">Kembali</button></a>
+                                        <a style="text-decoration:none" href="admin.php"><button type="button" name="" class="btn btn-danger btn-user btn-block">Kembali</button></a>
                                     </form>
                                     <hr>
                                     <div class="text-center">
