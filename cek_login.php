@@ -29,7 +29,7 @@ if ($data) {
 } else {
     echo "
     <script>
-        alert('Maaf, Login Gagal pastikan yang anda masukkan benar');
+        alert('Maaf, Login Gagal Pastikan Yang Anda Masukkan Benar');
         document.location='index.php';
     </script>";
 }

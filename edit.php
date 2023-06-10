@@ -85,10 +85,10 @@
                             </div>
                     <?php
                         } else {
-                            echo "Data tidak ditemukan.";
+                            echo "Data Tidak Ditemukan.";
                         }
                     } else {
-                        echo "ID tidak ditemukan.";
+                        echo "ID Tidak Ditemukan.";
                     }
 
                     // Menutup koneksi ke database
