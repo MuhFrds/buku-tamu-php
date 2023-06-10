@@ -53,7 +53,7 @@
                     ?>
 
                             <div class="col-lg-6">
-                                <div class="shadow bg-gradient-light p-5">
+                                <div class="shadow bg-info-light p-5">
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4"><b>Edit Data Pengunjung</b></h1>
                                     </div>

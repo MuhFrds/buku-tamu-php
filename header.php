@@ -52,7 +52,7 @@ if (
 
 </head>
 
-<body class="bg-gradient-primary">
+<body class="bg-gradient-info">
     <!-- container -->
     <div class="container">
         <?php include "koneksi.php"; ?>
