@@ -12,7 +12,7 @@
     <title> Halaman Login | Sistem Informasi Buku Tamu</title>
 
     <!-- fav icon -->
-    <link rel="icon" href="assets/img/youtube.png" type="image/x-icon">
+    <link rel="icon" href="assets/img/logo-sekolah.png" type="image/x-icon">
 
     <!-- Custom fonts for this template-->
     <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
