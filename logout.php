@@ -14,6 +14,6 @@ unset($_SESSION['username']);
 session_destroy();
 echo "
 <script>
-    alert('Anda telah keluar dari halaman administrator');
+    alert('Anda Telah Keluar Dari Halaman Administrator');
     document.location='index.php';
 </script>";

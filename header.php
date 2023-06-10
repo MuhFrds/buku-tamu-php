@@ -11,7 +11,7 @@ if (
     or empty($_SESSION['nama_pengguna'])
 ) {
     echo "<script>
-    alert('Maaf, untuk mengakses halaman ini harap login dahulu ');
+    alert('Maaf, Untuk Mengakses Halaman ini Harap Login Dahulu ');
     document.location='index.php';
     </script>";
 }
