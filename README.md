@@ -1,3 +1,3 @@
 # Web Buku Tamu Dengan PHP
 
-Tugas Akhir Membuat Buku Tamu
+Tugas Akhir Membuat CRUD Buku Tamu
