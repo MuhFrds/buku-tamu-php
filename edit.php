@@ -75,7 +75,7 @@
                                     </form>
                                     <hr>
                                     <div class="text-center">
-                                        <a class="small" href="#"> By. sayasendiri | 2023 -
+                                        <a class="small" href="#"> By. Muhammad Firdaus | 2023 -
                                             <?= date('Y') ?>
                                         </a>
                                     </div>
