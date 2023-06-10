@@ -8,6 +8,7 @@
                 <!-- Nested Row within Card Body -->
                 <div class="row">
                     <div class="col-lg-6 d-lg-block bg-info shadow-lg p-5 text-center">
+                        <img src="assets/img/logo-sekolah.png" alt="" width="200">
                         <br>
                         <br>
                         <br>
