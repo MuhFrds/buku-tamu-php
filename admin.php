@@ -36,7 +36,7 @@ if (isset($_POST['bsimpan'])) {
 <!-- Head -->
 <div class="head text-center">
     <img src="assets/img/logo-sekolah.png" alt="" width="100">
-    <h2 class="text-white">Sistem Infomasi Buku Tamu <br>
+    <h2 class="text-white">Sistem Informasi Buku Tamu <br>
         <b>SMK MUTUHARJO</b>
     </h2>
 </div>
