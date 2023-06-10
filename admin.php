@@ -256,7 +256,7 @@ if (isset($_POST['bsimpan'])) {
                                     </form>
                                     <form action="hapus.php" method="GET" style="display: inline;">
                                         <input type="hidden" name="id" value="<?= $data['id'] ?>">
-                                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">
+                                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data Ini?')">
                                             <i class=""></i> Delate
                                         </button>
                                     </form>
