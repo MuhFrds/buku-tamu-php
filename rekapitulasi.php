@@ -10,7 +10,7 @@ include "header.php";
         <!-- awal card -->
         <div class="card shadow mb-4 mt-3">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary"> Rekapitulasi pengunjung</h6>
+                <h6 class="m-0 font-weight-bold text-primary"> Rekapitulasi Pengunjung</h6>
             </div>
             <div class="card-body">
                 <form method="POST" action="" class="text-center">
@@ -18,7 +18,7 @@ include "header.php";
                         <div class="col-md-3"></div>
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label for="">dari tanggal</label>
+                                <label for="">Dari tanggal</label>
                                 <input type="date" class="form-control" name="tanggal1" value="<?= isset($_POST['tanggal1']) ?
                                                                                                     $_POST['tanggal1'] : date('Y-m-d') ?>" required>
                             </div>
