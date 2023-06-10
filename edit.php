@@ -12,8 +12,8 @@
                         <br>
                         <br>
                         <br>
-                        <h3 class="text-white">Sistem Informasi Buku Tamu</h3>
-                        <h4><small class="text-white">Sukoharjo, Jawa Tengah</small></h4>
+                        <h4 class="text-white"><b>Sistem Informasi Buku Tamu</b></h4>
+                        <h4><small class="text-white">SMK MUTUHARJO</small></h4>
                     </div>
                     <?php
                     // Memeriksa apakah parameter "id" ada dalam URL
