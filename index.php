@@ -27,7 +27,7 @@
 
 <!-- background -->
 
-<body class="bg-gradient-primary">
+<body class="bg-gradient-info">
 
     <div class="container">
 
@@ -40,7 +40,7 @@
                     <div class="card-body p-0">
                         <!-- Nested Row within Card Body -->
                         <div class="row">
-                            <div class="col-lg-6 d-lg-block bg-success shadow-lg p-5 text-center">
+                            <div class="col-lg-6 d-lg-block bg-info shadow-lg p-5 text-center">
                                 <img src="assets/img/logo-sekolah.png" alt="" width="200">
                                 <br><br>
                                 <h3 class="text-white"> Sistem Informasi Buku Tamu <br>
